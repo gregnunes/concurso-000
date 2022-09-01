@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"/>
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Concurso Público para Desenvolvedore de Software</h2>
+      </div>
+
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="nome">*Nome Completo:</label>
+          <input
+            type="text"
+            pattern="^[a-zA-Z0-9]+$"
+            id="nome"
+            maxlength="33"
+            placeholder="Digite seu nome.."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="endereco">*Endereço:</label>
+          <input type="text" id="endereco" placeholder="Digite seu endereço.." />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="CPF">*CPF:</label>
+          <input type="text" name="CPF" id="CPF"
+          minlength="14" maxlength="14"
+            onkeyup="mask(this)" placeholder="Digite seu CPF..">
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="select">
+            <label for="estado">Estado:</label>
+            <select name="estado" id="estado">
+                <option value="">Estado</option>
+                <option value="SC">Santa Catarina</option>
+            </select>
+            </div>
+        
+            <br>    
+            
+            <div class="select">
+            <label for="cidade">Cidade:</label>
+            <select name="cidade" id="cidade">
+                <option value="">Cidade</option>
+                <option value="florianopolis">Florianópolis</option>
+                </select>
+            </div>
+            <br>
+            
+            
+          <div class="form-control">
+          <label for="text">*Cargo:</label>
+          <input
+            type="text"
+            id="cargo"
+            placeholder="Digite o cargo..."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <button type="submit"><strong>Salvar inscrição</strong></button>
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./scripts.js"></script>
+    
+    
+    
+  
+
+</body>
+  
+</html>
